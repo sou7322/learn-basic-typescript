@@ -18,7 +18,9 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     open: true
   },
 
