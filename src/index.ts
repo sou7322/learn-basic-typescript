@@ -1,7 +1,8 @@
-import { notExistSample, primitiveSample } from './basic/index';
+import { anySample, notExistSample, primitiveSample } from './basic/index';
 
 primitiveSample();
 notExistSample();
+anySample();
 
 // import World from './world';
 // const root = document.getElementById('root');
