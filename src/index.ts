@@ -1,6 +1,11 @@
-import World from './world';
+import { unknownSample, anySample, notExistSample, primitiveSample } from './basic/index';
 
-const root = document.getElementById('root');
+primitiveSample();
+notExistSample();
+anySample();
+unknownSample();
 
-const world = new World('Hello World');
-world.sayHello(root);
+// import World from './world';
+// const root = document.getElementById('root');
+// const world = new World('Hello World');
+// world.sayHello(root);
