@@ -16,7 +16,7 @@ export default function notExistSample() {
   console.log('nullName:', typeof age, age);
 
   if (!age) {
-    console.log("My age is confidential.");
+    console.log('My age is confidential.');
   } else {
     console.log(`I'm ${age} years old.`);
   }
