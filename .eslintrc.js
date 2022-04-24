@@ -1,19 +1,25 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true
-  },
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended", // TypeScriptでチェックされる項目をLintから除外する設定
-    "prettier", // prettierのextendsは他のextendsより後に記述する
-  ],
-  plugins: ["@typescript-eslint"],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    "sourceType": "module",
-    "project": "./tsconfig.json" // TypeScriptのLint時に参照するconfigファイルを指定
-  },
-  root: true, // 上位ディレクトリにある他のeslintrcを参照しないようにする
-  rules: {}
+    "env": {
+        "browser": true,
+        "es6": true,
+    },
+    "extends": [
+        "eslint:recommended",
+
+        // 型を必要としないプラグインの推奨ルールをすべて有効
+        // 'plugin:@typescript-eslint/recommended',
+        // 型を必要とするプラグインの推奨ルールをすべて有効
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+
+        "prettier", // prettierのextendsは他のextendsより後に記述する
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json" // TypeScriptのLint時に参照するconfigファイルを指定
+      },
+    "plugins": ["@typescript-eslint"],
+    "root": true, // 上位ディレクトリにある他のeslintrcを参照しないようにする
+    "rules": {}
 }
