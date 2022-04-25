@@ -11,20 +11,20 @@ export default function objectSample() {
 
   // 実際そのオブジェクトがどんな構造を持つかを定義しなければならない
   // オブジェクトリテラル記法
-  let member : {
-    name: String
-    age: Number
+  let member: {
+    name: String;
+    age: Number;
   } = {
     name: 'Amy',
     age: 15,
-  }
+  };
   console.log('objectSample:', member);
 
   // 再代入可能
   member = {
     name: 'John',
     age: 25,
-  }
+  };
   console.log('objectSample:', member);
 
   // 一度定義された型は再代入の際も担保される
@@ -36,15 +36,15 @@ export default function objectSample() {
   // オプショナルプロパティ: あってもなくてもよい
   // リードオンリープロパティ: 上書き不可能
   const member2: {
-    name: string
-    age: number
-    job?: string
-    readonly country: string
+    name: string;
+    age: number;
+    job?: string;
+    readonly country: string;
   } = {
     name: 'Sharon',
     age: 20,
     country: 'America',
-  }
+  };
   console.log('objectSample2:', member2);
 
   member2.name = 'Yamada';
@@ -57,11 +57,11 @@ export default function objectSample() {
   // * [key: keyの型]: valueの型
   // * keyの型はstring, numberのどちらかのみ
   const capitals: {
-    [name: string]: string
+    [name: string]: string;
   } = {
     Japan: 'Tokyo',
     America: 'Washington',
-  }
+  };
   // 追加も可能
   capitals.Korea = 'Seoul';
 
@@ -72,16 +72,16 @@ export default function objectSample() {
   // * 再利用可能なためDRYになる
   // * 変数の役割が明確化される
   type Country = {
-    name: string
-    language: string
-    capital: string
+    name: string;
+    language: string;
+    capital: string;
   };
 
   const japan: Country = {
     name: 'Japan',
     language: 'Japanese',
     capital: 'Tokyo',
-  }
+  };
   console.log('alias:', japan);
 
   const america: Country = {
@@ -93,17 +93,17 @@ export default function objectSample() {
 
   // 合併型と交差型
   type Knight = {
-    hp: number
-    sp: number
-    weapon: string
-    swordSkill: string
+    hp: number;
+    sp: number;
+    weapon: string;
+    swordSkill: string;
   };
 
   type Wizard = {
-    hp: number
-    mp: number
-    weapon: string
-    magicSkill: string
+    hp: number;
+    mp: number;
+    weapon: string;
+    magicSkill: string;
   };
 
   // 合併型: A型とB型のどちらかである
@@ -113,15 +113,15 @@ export default function objectSample() {
     hp: 100,
     sp: 80,
     weapon: 'Wood Sword',
-    swordSkill: 'Slash'
-  }
+    swordSkill: 'Slash',
+  };
   console.log('Adventurer1:', adventurer1);
 
   const adventurer2: Adventurer = {
     hp: 70,
     mp: 130,
     weapon: 'Wood Wand',
-    magicSkill: 'Fire Ball'
+    magicSkill: 'Fire Ball',
   };
   console.log('Adventurer2:', adventurer2);
 
@@ -132,7 +132,7 @@ export default function objectSample() {
     mp: 130,
     weapon: 'Wood Wand',
     swordSkill: 'Slash',
-    magicSkill: 'Fire Ball'
+    magicSkill: 'Fire Ball',
   };
   console.log('Adventurer3:', adventurer3);
 
@@ -145,8 +145,8 @@ export default function objectSample() {
     mp: 100,
     weapon: 'Wood Sword',
     swordSkill: 'Slash',
-    magicSkill: 'Fire Ball'
-  }
+    magicSkill: 'Fire Ball',
+  };
   console.log('Paladin1:', paladin1);
 
   // 2つの型のプロパティを不足なく持っていなければならない
