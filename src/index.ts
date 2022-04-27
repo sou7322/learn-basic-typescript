@@ -1,9 +1,16 @@
-/* オブジエクトの型定義*/
+/* 配列の型定義*/
+
+import arraySample from "./array/array";
+arraySample();
+
+/*ここまで */
+
+/* オブジエクトの型定義
 
 import objectSample from './object/object';
 objectSample();
 
-/*ここまで */
+ここまで */
 
 /* 関数の型定義
 
