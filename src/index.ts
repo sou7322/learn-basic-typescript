@@ -1,7 +1,10 @@
 /* 配列の型定義*/
 
-import arraySample from './array/array';
-arraySample();
+// import arraySample from './array/array';
+// arraySample();
+
+import tupleSample from './array/tuple';
+tupleSample();
 
 /*ここまで */
 
