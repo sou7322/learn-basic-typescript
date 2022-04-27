@@ -35,4 +35,4 @@ export default function arraySample() {
   // array5.push(true);
 
   console.log('array5:', array5);
-};
+}
