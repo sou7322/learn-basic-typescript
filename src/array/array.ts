@@ -35,4 +35,23 @@ export default function arraySample() {
   // array5.push(true);
 
   console.log('array5:', array5);
+
+  // ミュータブル（書き換え可能）・イミュータブル（書き換え不可能）な配列
+
+  // JavaScriptの配列はconstで定義しても書き換え可能
+  const array6: number[] = [1, 2, 3];
+  array6[1] = 9;
+  console.log('array6:', array6);
+
+  // readonlyを用いてイミュータブルに
+  const array7: readonly number[] = [1, 2, 3];
+  // array7[1] = 8;
+  // array7.push(8):
+  console.log('array7:', array7);
+
+  // readonlyの記法は他にも2種
+  const array8: ReadonlyArray<number> = [1, 2, 3];
+  const array9: Readonly<number[]> = [1, 2, 3];
+
+  console.log(array8, array9);
 }
