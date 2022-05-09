@@ -3,6 +3,9 @@
 import genericsBasicSample from "./generics/basic";
 genericsBasicSample();
 
+import genericsAdvancedSample from "./generics/advanced";
+genericsAdvancedSample();
+
 /*ここまで */
 
 /* 配列の型定義
