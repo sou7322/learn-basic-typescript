@@ -1,12 +1,19 @@
-/* 配列の型定義*/
+/* ジェネリック型*/
+
+import genericsBasicSample from "./generics/basic";
+genericsBasicSample();
+
+/*ここまで */
+
+/* 配列の型定義
 
 import arraySample from './array/array';
 arraySample();
 
-// import tupleSample from './array/tuple';
-// tupleSample();
+import tupleSample from './array/tuple';
+tupleSample();
 
-/*ここまで */
+ここまで */
 
 /* オブジエクトの型定義
 
